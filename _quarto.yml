@@ -9,12 +9,12 @@ brand: _brand.yml
 # Format defaults
 format:
   html:
-    theme: [brand, fhswf-html.scss]
+    theme: [brand, styles/fhswf-html.scss]
     toc: true
     toc-title: "Inhalt"
   
   revealjs:
-    theme: [brand, fhswf-revealjs.scss]
+    theme: [brand, styles/fhswf-revealjs.scss]
     slide-number: true
     footer: "{{< brand color primary >}} • FH Südwestfalen"
     logo: medium

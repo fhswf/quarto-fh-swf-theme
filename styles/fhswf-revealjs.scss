@@ -1,7 +1,7 @@
 /*-- scss:defaults --*/
 
 // Import shared variables
-@import "variables";
+@import "./variables";
 
 // Brand colors are automatically available via _brand.yml
 // They appear as SCSS variables like $brand-primary, $brand-blau, etc.
@@ -12,19 +12,6 @@ $presentation-h1-font-size: 2.5em;
 $presentation-h2-font-size: 1.8em;
 $presentation-h3-font-size: 1.5em;
 $presentation-h4-font-size: 1.2em;
-
-// Colors from brand.yml
-$body-bg: $background !default;
-$body-color: $foreground !default;
-$link-color: $primary !default;
-
-// Progress bar color
-$progress-bar-height: 4px !default;
-
-// Code blocks
-$code-color: $foreground !default;
-$code-block-bg: $light !default;
-$code-block-border-color: $secondary !default;
 
 /*-- scss:rules --*/
 
@@ -144,22 +131,22 @@ $code-block-border-color: $secondary !default;
     }
     
     &.has-red-background {
-      background-color: $rot !important;
+      background-color: $brand-rot !important;
       color: white;
     }
     
     &.has-orange-background {
-      background-color: $orange !important;
+      background-color: $brand-orange !important;
       color: white;
     }
     
     &.has-teal-background {
-      background-color: $tuerkis !important;
+      background-color: $brand-tuerkis !important;
       color: white;
     }
     
     &.has-green-background {
-      background-color: $gruen !important;
+      background-color: $brand-gruen !important;
       color: white;
     }
   }
