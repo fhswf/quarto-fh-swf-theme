@@ -1,0 +1,163 @@
+<!-- FH-SWF Custom Title Slide -->
+<section id="title-slide" class="title-slide">
+  <div class="title-slide-container">
+    <!-- Logo -->
+    <div class="title-slide-logo">
+      {{< brand logo medium >}}
+    </div>
+    
+    <!-- Title Section -->
+    <div class="title-slide-title">
+      <h1>{{ title }}</h1>
+      {{#if subtitle}}
+      <p class="subtitle">{{ subtitle }}</p>
+      {{/if}}
+    </div>
+    
+    <!-- Author and Institution -->
+    <div class="title-slide-meta">
+      {{#if author}}
+      <p class="author">{{ author }}</p>
+      {{/if}}
+      
+      {{#if date}}
+      <p class="date">{{ date }}</p>
+      {{/if}}
+      
+      {{#if institution}}
+      <p class="institution">{{ institution }}</p>
+      {{/if}}
+    </div>
+    
+    <!-- FH-SWF Claim -->
+    <div class="title-slide-claim">
+      <p class="claim">»Wir geben Impulse«</p>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Title slide styling */
+.title-slide {
+  background-color: {{< brand color primary >}} !important;
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  position: relative;
+  overflow: hidden;
+}
+
+.title-slide-container {
+  max-width: 800px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.title-slide-logo {
+  margin-bottom: 2rem;
+}
+
+.title-slide-logo img {
+  height: 100px;
+  width: auto;
+  max-width: 300px;
+}
+
+.title-slide-title h1 {
+  font-size: 2.8em;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: white;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.title-slide-title .subtitle {
+  font-size: 1.4em;
+  font-weight: 300;
+  margin-top: 0.5rem;
+  opacity: 0.9;
+}
+
+.title-slide-meta {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 9px;
+  border-left: 4px solid white;
+}
+
+.title-slide-meta p {
+  margin: 0.5rem 0;
+  font-size: 1.1em;
+}
+
+.title-slide-meta .author {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.title-slide-meta .institution {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.title-slide-claim {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.title-slide-claim .claim {
+  font-size: 1.3em;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Decorative elements */
+.title-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), transparent);
+  pointer-events: none;
+}
+
+.title-slide::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent);
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .title-slide-title h1 {
+    font-size: 2em;
+  }
+  
+  .title-slide-title .subtitle {
+    font-size: 1.1em;
+  }
+  
+  .title-slide-logo img {
+    height: 70px;
+  }
+  
+  .title-slide-container {
+    padding: 1rem;
+  }
+}
+</style>

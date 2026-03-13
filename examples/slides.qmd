@@ -1,0 +1,196 @@
+---
+title: "FH-SWF Theme Presentation Example"
+subtitle: "Quarto RevealJS mit FH-SWF Corporate Design"
+author: "Max Mustermann"
+date: "März 2026"
+institution: "Fachhochschule Südwestfalen"
+format:
+  revealjs:
+    incremental: true
+---
+
+# {{< brand color primary >}}Willkommen
+
+## Quarto Präsentation mit FH-SWF Corporate Design
+
+Diese Präsentation zeigt die Implementierung des **FH-SWF Corporate Design** in Quarto.
+
+---
+
+## {{< brand color primary >}}Farben der FH-SWF
+
+### Primärfarbe
+
+**Blau** (`{{< brand color primary >}}`) ist die Hausfarbe der FH-SWF.
+
+```{=html}
+<div style="background-color: {{< brand color primary >}}; color: white; padding: 1rem; border-radius: 9px;">
+  Blau: {{< brand color primary >}}
+</div>
+```
+
+---
+
+### {{< brand color primary >}}Sekundärfarben
+
+Die Sekundärfarben werden für thematische Gliederung verwendet:
+
+```{=html}
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 1rem 0;">
+  <div style="background-color: {{< brand color rot >}}; color: white; padding: 0.5rem; border-radius: 9px; text-align: center;">
+    Rot<br>Präsenz-Bachelor
+  </div>
+  <div style="background-color: {{< brand color orange >}}; color: white; padding: 0.5rem; border-radius: 9px; text-align: center;">
+    Orange<br>Präsenz-Master
+  </div>
+  <div style="background-color: {{< brand color tuerkis >}}; color: white; padding: 0.5rem; border-radius: 9px; text-align: center;">
+    Türkis<br>Verbund-Bachelor
+  </div>
+  <div style="background-color: {{< brand color gruen >}}; color: white; padding: 0.5rem; border-radius: 9px; text-align: center;">
+    Grün<br>Verbund-Master
+  </div>
+</div>
+```
+
+---
+
+## {{< brand color primary >}}Typografie
+
+### Schriftarten
+
+- **Lato**: Sans-serif für Überschriften und Fließtext
+- **Source Serif 4**: Serif für akademische Texte  
+- **JetBrains Mono**: Monospace für Code
+
+### Beispiele
+
+```markdown
+# Überschrift Level 1 (Lato 600)
+## Überschrift Level 2 (Lato 600)
+### Überschrift Level 3 (Lato 600)
+
+Normaler Fließtext in Lato Regular.
+
+> Zitat in Source Serif 4 mit deutschen Anführungszeichen.
+```
+
+---
+
+## {{< brand color primary >}}Code-Beispiele
+
+```python
+# Einfache Python-Funktion
+def berechne_summe(a, b):
+    """Berechnet die Summe zweier Zahlen."""
+    return a + b
+
+# Beispielaufruf
+ergebnis = berechne_summe(5, 3)
+print(f"Die Summe ist: {ergebnis}")
+```
+
+```r
+# R-Code Beispiel
+library(ggplot2)
+
+# Daten erstellen
+daten <- data.frame(
+  x = 1:10,
+  y = rnorm(10)
+)
+
+# Plot erstellen
+ggplot(daten, aes(x = x, y = y)) +
+  geom_line(color = "{{< brand color primary >}}") +
+  geom_point(size = 3)
+```
+
+---
+
+## {{< brand color primary >}}Design-Elemente
+
+### Rahmen (CD Kapitel 4)
+
+```{=html}
+<div style="border: 2px solid {{< brand color primary >}}; border-radius: 9px; padding: 2rem; margin: 1rem 0;">
+  <h3 style="color: {{< brand color primary >}}; margin-top: 0;">Rahmen-Element</h3>
+  <p>Rahmen haben eine abgerundete Ecke mit 9mm Radius bei A4 (1:3 Verhältnis).</p>
+</div>
+```
+
+---
+
+## {{< brand color primary >}}Aufzählungen
+
+### Ungeordnete Liste
+
+- Erster Punkt mit Lato Regular
+- Zweiter Punkt
+- Dritter Punkt mit längerem Text um den Zeilenumbruch zu zeigen
+
+### Geordnete Liste
+
+1. Erster Schritt im Prozess
+2. Zweiter Schritt mit wichtigen Details
+3. Dritter und letzter Schritt
+
+### Checkliste
+
+- [x] Task 1 - Abgeschlossen
+- [ ] Task 2 - In Bearbeitung  
+- [ ] Task 3 - Noch nicht begonnen
+
+---
+
+## {{< brand color primary >}}Tabellen
+
+### Beispieltabelle
+
+| Studiengang | Typ | Farbe |
+|-------------|-----|-------|
+| Informatik B.Sc. | Präsenz-Bachelor | {{< brand color rot >}} |
+| Wirtschaftsingenieurwesen M.Sc. | Präsenz-Master | {{< brand color orange >}} |
+| Maschinenbau B.Eng. | Verbund-Bachelor | {{< brand color tuerkis >}} |
+| Elektrotechnik M.Eng. | Verbund-Master | {{< brand color gruen >}} |
+
+---
+
+## {{< brand color primary >}}Claim
+
+```{=html}
+<div style="text-align: center; margin: 3rem 0; font-size: 1.5em; color: {{< brand color primary >}};">
+  »Wir geben Impulse«
+</div>
+```
+
+---
+
+## {{< brand color primary >}}Fazit
+
+### Vorteile des FH-SWF Quarto Themes
+
+1. **Konsistente Darstellung** im Corporate Design
+2. **Einfache Nutzung** durch _brand.yml
+3. **Flexibel** für Präsentationen und Dokumente
+4. **Open Source** Schriftarten
+
+### Nächste Schritte
+
+- Theme testen und anpassen
+- Beispiel-Dokument erstellen
+- Auf GitHub veröffentlichen
+
+---
+
+# {{< brand color primary >}}Vielen Dank!
+
+### Fragen?
+
+**Kontakt:** [themenentwicklung@fh-swf.de](mailto:themenentwicklung@fh-swf.de)
+
+**Quelle:** [https://www.fh-swf.de/](https://www.fh-swf.de/)
+
+---
+::: {.slide-background style="background-color: {{< brand color primary >}};"}
+## Danke für Ihre Aufmerksamkeit! {style="color: white; text-align: center;"}
+:::

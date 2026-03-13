@@ -1,0 +1,186 @@
+/*-- scss:defaults --*/
+
+// Import shared variables
+@import "variables";
+
+// Brand colors are automatically available via _brand.yml
+// They appear as SCSS variables like $brand-primary, $brand-blau, etc.
+
+// Override RevealJS defaults
+$presentation-font-size-root: 32px;
+$presentation-h1-font-size: 2.5em;
+$presentation-h2-font-size: 1.8em;
+$presentation-h3-font-size: 1.5em;
+$presentation-h4-font-size: 1.2em;
+
+// Colors from brand.yml
+$body-bg: $background !default;
+$body-color: $foreground !default;
+$link-color: $primary !default;
+
+// Progress bar color
+$progress-bar-height: 4px !default;
+
+// Code blocks
+$code-color: $foreground !default;
+$code-block-bg: $light !default;
+$code-block-border-color: $secondary !default;
+
+/*-- scss:rules --*/
+
+.reveal {
+  // Frame styling (CD Kapitel 4: Rahmen)
+  .slides {
+    section {
+      border-radius: $fhswf-border-radius;
+      padding: 1.5rem;
+      
+      // Blue header bar (inspired by CD PowerPoint template)
+      h1, h2, h3 {
+        color: $primary;
+        border-bottom: 3px solid $primary;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      h1 {
+        font-size: $fhswf-h1-font-size;
+        font-weight: 600;
+      }
+      
+      h2 {
+        font-size: $fhswf-h2-font-size;
+        font-weight: 600;
+      }
+      
+      h3 {
+        font-size: $fhswf-h3-font-size;
+        font-weight: 600;
+      }
+    }
+  }
+  
+  // Quote styling with German guillemets
+  blockquote {
+    border-left: 4px solid $primary;
+    padding-left: 1rem;
+    font-style: italic;
+    font-family: "Source Serif 4", serif;
+    
+    &::before {
+      content: "»";
+      color: $primary;
+      font-size: 1.5em;
+      margin-right: 0.25em;
+    }
+    
+    &::after {
+      content: "«";
+      color: $primary;
+      font-size: 1.5em;
+      margin-left: 0.25em;
+    }
+  }
+  
+  // Lists
+  ul, ol {
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+  
+  // Code blocks
+  pre {
+    border-radius: $fhswf-border-radius-sm;
+    border: 1px solid $secondary;
+    
+    code {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.85em;
+    }
+  }
+  
+  // Inline code
+  code:not(pre code) {
+    background-color: $light;
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9em;
+  }
+  
+  // Tables
+  table {
+    border-collapse: collapse;
+    border: 1px solid $secondary;
+    
+    th {
+      background-color: $primary;
+      color: white;
+      font-weight: 600;
+      padding: 0.75rem;
+    }
+    
+    td {
+      border: 1px solid $secondary;
+      padding: 0.5rem;
+    }
+    
+    tr:nth-child(even) {
+      background-color: rgba($secondary, 0.1);
+    }
+  }
+  
+  // Color-coded content blocks
+  .slide-background-content {
+    &.has-primary-background {
+      background-color: $primary !important;
+      color: white;
+      
+      h1, h2, h3, h4, h5, h6 {
+        color: white;
+        border-bottom-color: rgba(white, 0.3);
+      }
+    }
+    
+    &.has-red-background {
+      background-color: $rot !important;
+      color: white;
+    }
+    
+    &.has-orange-background {
+      background-color: $orange !important;
+      color: white;
+    }
+    
+    &.has-teal-background {
+      background-color: $tuerkis !important;
+      color: white;
+    }
+    
+    &.has-green-background {
+      background-color: $gruen !important;
+      color: white;
+    }
+  }
+}
+
+// Slide numbers
+.reveal .slide-number {
+  color: $primary;
+  font-family: "JetBrains Mono", monospace;
+}
+
+// Progress bar
+.reveal .progress {
+  background: rgba($primary, 0.2);
+  
+  span {
+    background: $primary;
+  }
+}
+
+// Controls
+.reveal .controls {
+  color: $primary;
+}

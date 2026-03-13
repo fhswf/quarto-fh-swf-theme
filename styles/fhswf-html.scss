@@ -1,0 +1,315 @@
+/*-- scss:defaults --*/
+
+// Import shared variables
+@import "variables";
+
+// Bootstrap variables overridden by brand.yml
+// The following will be set by _brand.yml:
+// - $primary, $secondary, $success, $info, $warning, $danger
+// - $body-bg, $body-color, $link-color
+// - Font families and sizes
+
+// Additional Bootstrap customizations
+$enable-rounded: true;
+$border-radius: $fhswf-border-radius;
+$border-radius-lg: $fhswf-border-radius-lg;
+$border-radius-sm: $fhswf-border-radius-sm;
+
+$navbar-padding-y: $fhswf-spacing-md;
+$navbar-padding-x: $fhswf-spacing-lg;
+
+// Headings
+$h1-font-size: $fhswf-h1-font-size;
+$h2-font-size: $fhswf-h2-font-size;
+$h3-font-size: $fhswf-h3-font-size;
+$h4-font-size: $fhswf-h4-font-size;
+$h5-font-size: $fhswf-h5-font-size;
+$h6-font-size: $fhswf-h6-font-size;
+
+$headings-font-weight: 600;
+$headings-color: $primary;
+
+/*-- scss:rules --*/
+
+// Navbar styling (primary blue background)
+.navbar {
+  background-color: $primary !important;
+  border-bottom: 3px solid darken($primary, 10%);
+  
+  .navbar-brand {
+    color: white !important;
+    font-weight: 600;
+    
+    img {
+      height: 40px;
+      margin-right: $fhswf-spacing-sm;
+    }
+  }
+  
+  .nav-link {
+    color: rgba(white, 0.9) !important;
+    
+    &:hover {
+      color: white !important;
+    }
+  }
+}
+
+// Main content
+main {
+  // Frame styling for content sections
+  .content {
+    .page-columns {
+      .column-body {
+        border-left: 3px solid $primary;
+        padding-left: $fhswf-spacing-lg;
+      }
+    }
+  }
+  
+  // Headings with blue underline
+  h1, h2, h3 {
+    border-bottom: 2px solid $primary;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  // Links
+  a {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    
+    &:hover {
+      text-decoration-thickness: 2px;
+    }
+  }
+  
+  // Blockquotes with German guillemets
+  blockquote {
+    border-left: 4px solid $primary;
+    padding-left: $fhswf-spacing-lg;
+    margin-left: 0;
+    font-style: italic;
+    font-family: "Source Serif 4", serif;
+    background-color: rgba($primary, 0.05);
+    border-radius: 0 $fhswf-border-radius $fhswf-border-radius 0;
+    
+    &::before {
+      content: "»";
+      color: $primary;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-right: 0.25em;
+    }
+    
+    &::after {
+      content: "«";
+      color: $primary;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-left: 0.25em;
+    }
+  }
+  
+  // Code blocks
+  pre {
+    border-radius: $fhswf-border-radius-sm;
+    border: 1px solid $secondary;
+    background-color: $light !important;
+    
+    code {
+      font-family: "JetBrains Mono", monospace;
+    }
+  }
+  
+  // Inline code
+  code:not(pre code) {
+    background-color: $light;
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9em;
+  }
+  
+  // Tables
+  table {
+    border-collapse: collapse;
+    border: 1px solid $secondary;
+    margin-bottom: $fhswf-spacing-lg;
+    
+    thead {
+      th {
+        background-color: $primary;
+        color: white;
+        font-weight: 600;
+        padding: $fhswf-spacing-md;
+        border: 1px solid darken($primary, 10%);
+      }
+    }
+    
+    tbody {
+      td {
+        border: 1px solid $secondary;
+        padding: $fhswf-spacing-sm;
+      }
+      
+      tr:nth-child(even) {
+        background-color: rgba($secondary, 0.05);
+      }
+    }
+  }
+  
+  // Callout blocks using secondary colors
+  .callout {
+    border-radius: $fhswf-border-radius;
+    border-width: 2px;
+    
+    // Default callout (note)
+    &.callout-note {
+      border-color: $primary;
+      background-color: rgba($primary, 0.05);
+    }
+    
+    // Warning callout
+    &.callout-warning {
+      border-color: $warning;
+      background-color: rgba($warning, 0.05);
+    }
+    
+    // Important callout
+    &.callout-important {
+      border-color: $danger;
+      background-color: rgba($danger, 0.05);
+    }
+    
+    // Tip callout
+    &.callout-tip {
+      border-color: $success;
+      background-color: rgba($success, 0.05);
+    }
+    
+    // Custom FH-SWF colored callouts
+    &.callout-bachelor-presence {
+      border-color: $rot;
+      background-color: rgba($rot, 0.05);
+    }
+    
+    &.callout-master-presence {
+      border-color: $orange;
+      background-color: rgba($orange, 0.05);
+    }
+    
+    &.callout-bachelor-dual {
+      border-color: $tuerkis;
+      background-color: rgba($tuerkis, 0.05);
+    }
+    
+    &.callout-master-dual {
+      border-color: $gruen;
+      background-color: rgba($gruen, 0.05);
+    }
+  }
+  
+  // Lists
+  ul, ol {
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+  
+  // TOC sidebar
+  #TOC {
+    border-right: 2px solid $primary;
+    padding-right: $fhswf-spacing-lg;
+    
+    .nav-link {
+      color: $body-color;
+      
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+// Footer
+footer {
+  background-color: rgba($primary, 0.1);
+  border-top: 2px solid $primary;
+  margin-top: $fhswf-spacing-xl;
+  padding: $fhswf-spacing-lg 0;
+  
+  .footer-contents {
+    text-align: center;
+    color: $secondary;
+    
+    .claim {
+      font-style: italic;
+      color: $primary;
+      margin-top: $fhswf-spacing-md;
+    }
+  }
+}
+
+// Color demonstration classes (for example documents)
+.color-demo {
+  &-primary {
+    background-color: $primary;
+    color: white;
+    padding: $fhswf-spacing-md;
+    border-radius: $fhswf-border-radius;
+  }
+  
+  &-rot {
+    background-color: $rot;
+    color: white;
+    padding: $fhswf-spacing-md;
+    border-radius: $fhswf-border-radius;
+  }
+  
+  &-orange {
+    background-color: $orange;
+    color: white;
+    padding: $fhswf-spacing-md;
+    border-radius: $fhswf-border-radius;
+  }
+  
+  &-tuerkis {
+    background-color: $tuerkis;
+    color: white;
+    padding: $fhswf-spacing-md;
+    border-radius: $fhswf-border-radius;
+  }
+  
+  &-gruen {
+    background-color: $gruen;
+    color: white;
+    padding: $fhswf-spacing-md;
+    border-radius: $fhswf-border-radius;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  main {
+    h1 {
+      font-size: calc($fhswf-h1-font-size * 0.8);
+    }
+    
+    h2 {
+      font-size: calc($fhswf-h2-font-size * 0.8);
+    }
+    
+    h3 {
+      font-size: calc($fhswf-h3-font-size * 0.8);
+    }
+  }
+  
+  .navbar {
+    .navbar-brand {
+      img {
+        height: 30px;
+      }
+    }
+  }
+}

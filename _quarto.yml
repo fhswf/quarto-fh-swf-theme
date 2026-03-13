@@ -1,0 +1,29 @@
+# Quarto FH-SWF Theme - Project Configuration
+project:
+  type: default
+  output-dir: _site
+
+# Brand configuration
+brand: _brand.yml
+
+# Format defaults
+format:
+  html:
+    theme: [brand, fhswf-html.scss]
+    toc: true
+    toc-title: "Inhalt"
+  
+  revealjs:
+    theme: [brand, fhswf-revealjs.scss]
+    slide-number: true
+    footer: "{{< brand color primary >}} • FH Südwestfalen"
+    logo: medium
+    template-partials:
+      - templates/title-slide.html
+
+# Common metadata
+metadata:
+  author: "FH Südwestfalen"
+  institution: "Fachhochschule Südwestfalen – University of Applied Sciences"
+  lang: "de"
+  date: today

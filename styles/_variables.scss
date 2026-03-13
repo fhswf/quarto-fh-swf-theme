@@ -1,0 +1,71 @@
+// FH-SWF Shared SCSS Variables
+// ==============================================
+
+// Primary Color Tint Scale (20%–100% in 10% steps)
+$fhswf-blue-20: lighten(#39569F, 80%);
+$fhswf-blue-30: lighten(#39569F, 70%);
+$fhswf-blue-40: lighten(#39569F, 60%);
+$fhswf-blue-50: lighten(#39569F, 50%);
+$fhswf-blue-60: lighten(#39569F, 40%);
+$fhswf-blue-70: lighten(#39569F, 30%);
+$fhswf-blue-80: lighten(#39569F, 20%);
+$fhswf-blue-90: lighten(#39569F, 10%);
+$fhswf-blue-100: #39569F;
+
+// Secondary Color Tint Scales (40%–100% in 10% steps)
+@function tint-scale($color, $percent) {
+  @return lighten($color, (100% - $percent));
+}
+
+$fhswf-gray-tints: ();
+$fhswf-red-tints: ();
+$fhswf-orange-tints: ();
+$fhswf-teal-tints: ();
+$fhswf-green-tints: ();
+$fhswf-pink-tints: ();
+$fhswf-waterblue-tints: ();
+
+@for $i from 1 through 7 {
+  $percent: 40% + ($i - 1) * 10%;
+  
+  // Gray (10/0/0/30)
+  $fhswf-gray-tints: map-merge($fhswf-gray-tints, (#{$percent}: tint-scale(#A1B3B3, $percent)));
+  
+  // Red (0/100/100/20)
+  $fhswf-red-tints: map-merge($fhswf-red-tints, (#{$percent}: tint-scale(#CC0000, $percent)));
+  
+  // Orange (0/50/100/0)
+  $fhswf-orange-tints: map-merge($fhswf-orange-tints, (#{$percent}: tint-scale(#FF8000, $percent)));
+  
+  // Teal/Türkis (100/10/30/0)
+  $fhswf-teal-tints: map-merge($fhswf-teal-tints, (#{$percent}: tint-scale(#009FB3, $percent)));
+  
+  // Green (40/0/100/0)
+  $fhswf-green-tints: map-merge($fhswf-green-tints, (#{$percent}: tint-scale(#99CC00, $percent)));
+  
+  // Pink (25/100/15/0)
+  $fhswf-pink-tints: map-merge($fhswf-pink-tints, (#{$percent}: tint-scale(#BF0088, $percent)));
+  
+  // Water Blue (100/30/0/0)
+  $fhswf-waterblue-tints: map-merge($fhswf-waterblue-tints, (#{$percent}: tint-scale(#0077BF, $percent)));
+}
+
+// Corner Radius (9mm at A4, ratio 1:3)
+$fhswf-border-radius: 9px;
+$fhswf-border-radius-lg: 12px;
+$fhswf-border-radius-sm: 6px;
+
+// Spacing
+$fhswf-spacing-xs: 0.25rem;
+$fhswf-spacing-sm: 0.5rem;
+$fhswf-spacing-md: 1rem;
+$fhswf-spacing-lg: 1.5rem;
+$fhswf-spacing-xl: 2rem;
+
+// Font sizes for headings (Lato semibold/600)
+$fhswf-h1-font-size: 2.5rem;
+$fhswf-h2-font-size: 2rem;
+$fhswf-h3-font-size: 1.75rem;
+$fhswf-h4-font-size: 1.5rem;
+$fhswf-h5-font-size: 1.25rem;
+$fhswf-h6-font-size: 1rem;

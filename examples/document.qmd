@@ -1,0 +1,373 @@
+---
+title: "FH-SWF Theme Dokument Beispiel"
+subtitle: "Quarto HTML Dokument mit FH-SWF Corporate Design"
+author: "Dr. Maria Schmidt"
+date: "März 2026"
+institution: "Fachhochschule Südwestfalen"
+format:
+  html:
+    toc: true
+    toc-title: "Inhaltsverzeichnis"
+    toc-depth: 3
+---
+
+# Einführung
+
+Dieses Dokument zeigt die Implementierung des **FH-SWF Corporate Design** in Quarto HTML-Dokumenten. Das Design basiert auf den Richtlinien aus dem CD-Handbuch (August 2014) und verwendet moderne Web-Technologien für eine konsistente Darstellung.
+
+## Corporate Design Elemente
+
+Das FH-SWF Corporate Design umfasst:
+
+1. **Farben**: Primärblau (`{{< brand color primary >}}`) als Hausfarbe plus sieben Sekundärfarben
+2. **Typografie**: Lato (sans-serif) und Source Serif 4 (serif) als Open-Source-Alternativen zu Fedra
+3. **Logo**: Wort-Bildmarke mit stilisiertem Gesichts-Icon
+4. **Designelemente**: Rahmen mit abgerundeten Ecken (9mm Radius bei A4)
+
+---
+
+## Farbpalette {#farben}
+
+### Primärfarbe
+
+Die Primärfarbe Blau ist die Hausfarbe der FH-SWF:
+
+```{=html}
+<div class="color-demo-primary">
+  <strong>Blau (Primärfarbe)</strong><br>
+  Hex: {{< brand color primary >}} | CMYK: 100/70/0/0 | RAL: 5005 Signalblau
+</div>
+```
+
+### Sekundärfarben
+
+Die Sekundärfarben haben spezifische Funktionen:
+
+```{=html}
+<div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+  <div class="color-demo-rot">
+    <strong>Rot</strong><br>
+    Präsenz-Bachelor<br>
+    {{< brand color rot >}}
+  </div>
+  <div class="color-demo-orange">
+    <strong>Orange</strong><br>
+    Präsenz-Master<br>
+    {{< brand color orange >}}
+  </div>
+  <div class="color-demo-tuerkis">
+    <strong>Türkis</strong><br>
+    Verbund-Bachelor<br>
+    {{< brand color tuerkis >}}
+  </div>
+  <div class="color-demo-gruen">
+    <strong>Grün</strong><br>
+    Verbund-Master<br>
+    {{< brand color gruen >}}
+  </div>
+</div>
+```
+
+Zusätzliche Sekundärfarben:
+
+- **Grau** (`{{< brand color grau >}}`): Allgemeine Verwendung
+- **Pink** (`{{< brand color pink >}}`): Allgemeine Verwendung  
+- **Wasserblau** (`{{< brand color wasserblau >}}`): Allgemeine Verwendung
+
+---
+
+## Typografie {#typografie}
+
+### Schriftarten
+
+| Rolle | Schriftart | Gewichte | Verwendung |
+|-------|------------|----------|------------|
+| Sans-serif | **Lato** | 300, 400, 500, 600, 700 | Überschriften, Fließtext, UI |
+| Serif | **Source Serif 4** | 400, 600, 700 | Akademische Texte, Zitate |
+| Monospace | **JetBrains Mono** | 400, 600 | Code, technische Inhalte |
+
+### Überschriften
+
+# Überschrift Level 1 (Lato 600)
+## Überschrift Level 2 (Lato 600)
+### Überschrift Level 3 (Lato 600)
+#### Überschrift Level 4 (Lato 600)
+
+### Fließtext
+
+Dies ist ein Beispiel für Fließtext in **Lato Regular**. Der Text hat einen **Zeilenhöhe** von 1.5 für optimale Lesbarkeit. Die Schriftgröße beträgt 16px auf Desktop-Geräten.
+
+> Dies ist ein Zitat in **Source Serif 4** mit deutschen Anführungszeichen. Zitate werden mit einem blauen Akzent auf der linken Seite und abgerundeten Ecken dargestellt.
+
+---
+
+## Code-Beispiele {#code}
+
+### Python
+
+```python
+import numpy as np
+import pandas as pd
+
+def berechne_statistiken(daten):
+    """
+    Berechnet grundlegende Statistiken für einen Datensatz.
+    
+    Args:
+        daten: Array-ähnliche Struktur mit numerischen Werten
+        
+    Returns:
+        dict: Dictionary mit Mittelwert, Standardabweichung, Minimum, Maximum
+    """
+    if len(daten) == 0:
+        return {}
+    
+    return {
+        'mittelwert': np.mean(daten),
+        'std': np.std(daten),
+        'min': np.min(daten),
+        'max': np.max(daten),
+        'anzahl': len(daten)
+    }
+
+# Beispielverwendung
+messwerte = [23.5, 24.1, 22.8, 25.3, 23.9]
+stats = berechne_statistiken(messwerte)
+print(f"Mittelwert: {stats['mittelwert']:.2f}")
+```
+
+### R
+
+```r
+# Datenanalyse mit ggplot2
+library(ggplot2)
+library(dplyr)
+
+# Daten vorbereiten
+daten <- mtcars %>%
+  mutate(
+    zylinder = as.factor(cyl),
+    gang = as.factor(gear)
+  )
+
+# Visualisierung erstellen
+plot <- ggplot(daten, aes(x = mpg, y = hp, color = zylinder)) +
+  geom_point(size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(
+    title = "Motorleistung vs. Kraftstoffverbrauch",
+    subtitle = "Gruppiert nach Zylinderzahl",
+    x = "Meilen pro Gallone (MPG)",
+    y = "Pferdestärken (HP)",
+    color = "Zylinder"
+  ) +
+  theme_minimal() +
+  scale_color_manual(values = c(
+    "4" = "{{< brand color tuerkis >}}",
+    "6" = "{{< brand color orange >}}", 
+    "8" = "{{< brand color rot >}}"
+  ))
+
+print(plot)
+```
+
+### Inline-Code
+
+Die Funktion `berechne_statistiken()` gibt ein Dictionary mit statistischen Kennzahlen zurück. In R verwendet man `ggplot()` für die Erstellung von Grafiken.
+
+---
+
+## Tabellen {#tabellen}
+
+### Studiengänge der FH-SWF
+
+| Studiengang | Abschluss | Typ | Farbe |
+|-------------|-----------|-----|-------|
+| Informatik | B.Sc. | Präsenz-Bachelor | {{< brand color rot >}} |
+| Wirtschaftsinformatik | B.Sc. | Präsenz-Bachelor | {{< brand color rot >}} |
+| Maschinenbau | B.Eng. | Verbund-Bachelor | {{< brand color tuerkis >}} |
+| Elektrotechnik | B.Eng. | Verbund-Bachelor | {{< brand color tuerkis >}} |
+| Wirtschaftsingenieurwesen | M.Sc. | Präsenz-Master | {{< brand color orange >}} |
+| Data Science | M.Sc. | Präsenz-Master | {{< brand color orange >}} |
+| International Management | M.A. | Verbund-Master | {{< brand color gruen >}} |
+
+### Prüfungsergebnisse
+
+| Matrikelnummer | Name | Prüfung | Note | Status |
+|----------------|------|---------|------|--------|
+| 123456 | Müller, Anna | Mathematik 1 | 1.7 | Bestanden |
+| 123457 | Schmidt, Ben | Programmierung | 2.3 | Bestanden |
+| 123458 | Weber, Clara | Physik | 4.0 | Nicht bestanden |
+| 123459 | Koch, David | BWL | 1.0 | Bestanden |
+| 123460 | Bauer, Elena | Englisch | 2.7 | Bestanden |
+
+---
+
+## Hinweisblöcke {#hinweise}
+
+::: {.callout-note}
+### Allgemeiner Hinweis
+
+Dies ist ein allgemeiner Hinweis mit blauer Umrandung. Hinweisblöcke verwenden abgerundete Ecken (9px Radius) entsprechend den CD-Richtlinien für Rahmen.
+:::
+
+::: {.callout-warning}
+### Wichtiger Hinweis
+
+Wichtige Informationen werden mit orangefarbener Umrandung hervorgehoben. Diese Farbe entspricht der Präsenz-Master-Farbe im Corporate Design.
+:::
+
+::: {.callout-important}
+### Kritischer Hinweis
+
+Kritische Informationen verwenden rote Umrandung, entsprechend der Präsenz-Bachelor-Farbe.
+:::
+
+::: {.callout-tip}
+### Tipp
+
+Hilfreiche Tipps und Empfehlungen werden mit grüner Umrandung dargestellt (Verbund-Master).
+:::
+
+### FH-SWF spezifische Hinweisblöcke
+
+::: {.callout-bachelor-presence}
+#### Präsenz-Bachelor Information
+
+Informationen speziell für Präsenz-Bachelor-Studiengänge. Diese Blöcke verwenden die rote Sekundärfarbe.
+:::
+
+::: {.callout-master-presence}
+#### Präsenz-Master Information
+
+Informationen speziell für Präsenz-Master-Studiengänge. Diese Blöcke verwenden die orange Sekundärfarbe.
+:::
+
+::: {.callout-bachelor-dual}
+#### Verbund-Bachelor Information
+
+Informationen speziell für Verbund-Bachelor-Studiengänge (duale Studiengänge). Diese Blöcke verwenden die türkise Sekundärfarbe.
+:::
+
+::: {.callout-master-dual}
+#### Verbund-Master Information
+
+Informationen speziell für Verbund-Master-Studiengänge. Diese Blöcke verwenden die grüne Sekundärfarbe.
+:::
+
+---
+
+## Listen {#listen}
+
+### Ungeordnete Liste
+
+- **Studienvoraussetzungen**
+  - Allgemeine Hochschulreife oder Fachhochschulreife
+  - Ggf. fachgebundene Hochschulreife
+  - Bei dualen Studiengängen: Ausbildungsvertrag mit Partnerunternehmen
+  
+- **Bewerbungsunterlagen**
+  - Lebenslauf
+  - Zeugnis der Hochschulzugangsberechtigung
+  - Bei internationalen Bewerbern: Sprachzertifikat
+  - Motivationsschreiben
+
+### Geordnete Liste
+
+1. **Bewerbung einreichen**
+   - Online-Bewerbung im Bewerbungsportal
+   - Hochladen aller erforderlichen Unterlagen
+   - Bestätigung der Datenrichtigkeit
+
+2. **Zulassungsbescheid**
+   - Prüfung der Unterlagen durch die Studienberatung
+   - Versand des Zulassungsbescheids per E-Mail
+   - Festlegung des Immatrikulationstermins
+
+3. **Immatrikulation**
+   - Bezahlung des Semesterbeitrags
+   - Online-Registrierung im Studierendenportal
+   - Abholung des Studierendenausweises
+
+### Checkliste
+
+- [x] Informationsmaterial anfordern
+- [x] Studienberatungstermin vereinbaren
+- [ ] Bewerbungsunterlagen zusammenstellen
+- [ ] Online-Bewerbung abschicken
+- [ ] Auf Zulassungsbescheid warten
+
+---
+
+## Rahmen-Elemente {#rahmen}
+
+Gemäß CD Kapitel 4 haben Rahmen abgerundete Ecken mit einem Radius von 9mm bei A4-Formaten (Verhältnis 1:3).
+
+```{=html}
+<div style="border: 2px solid {{< brand color primary >}}; border-radius: 9px; padding: 2rem; margin: 2rem 0;">
+  <h3 style="color: {{< brand color primary >}}; margin-top: 0;">Beispiel-Rahmen</h3>
+  <p>Dies ist ein Beispiel für einen Rahmen mit abgerundeten Ecken. Der Rahmen verwendet die Primärfarbe Blau und hat einen Innenabstand von 2rem.</p>
+  
+  <div style="border: 1px solid {{< brand color secondary >}}; border-radius: 6px; padding: 1rem; margin-top: 1rem; background-color: rgba({{< brand color primary >}}, 0.05);">
+    <p><strong>Innerer Rahmen:</strong> Verschachtelte Rahmen mit abgestuften Radien und Hintergrundfarben.</p>
+  </div>
+</div>
+```
+
+---
+
+## Fazit {#fazit}
+
+Das FH-SWF Quarto Theme ermöglicht die konsistente Anwendung des Corporate Designs in akademischen Dokumenten und Präsentationen.
+
+### Vorteile
+
+1. **Einheitliches Erscheinungsbild** über alle Dokumenttypen hinweg
+2. **Einfache Pflege** durch zentrale `_brand.yml`-Konfiguration
+3. **Moderne Web-Technologien** (SCSS, Google Fonts, responsive Design)
+4. **Vollständige Quarto-Integration** für HTML, RevealJS und zukünftige Formate
+
+### Technische Basis
+
+- **Quarto 1.6+** für `_brand.yml`-Unterstützung
+- **SCSS/CSS3** für flexible Stildefinitionen
+- **Google Fonts** für plattformübergreifende Schriftendarstellung
+- **Responsive Design** für optimale Darstellung auf allen Geräten
+
+### Nächste Schritte
+
+- Testen und Validieren der Farbwerte gegenüber den Druckvorlagen
+- Erstellen von Vorlagen für spezifische Dokumenttypen (Hausarbeiten, Thesen, etc.)
+- Entwicklung von Quarto-Erweiterungen für spezielle Anforderungen
+
+---
+
+## Anhang {#anhang}
+
+### Farbkonvertierung
+
+Die im Corporate Design Handbuch angegebenen CMYK-Werte wurden für die Web-Darstellung in Hex-Werte konvertiert:
+
+| Farbe | CMYK | Hex (berechnet) | Verwendung |
+|-------|------|-----------------|------------|
+| Blau | 100/70/0/0 | `{{< brand color primary >}}` | Primärfarbe, Logo |
+| Rot | 0/100/100/20 | `{{< brand color rot >}}` | Präsenz-Bachelor |
+| Orange | 0/50/100/0 | `{{< brand color orange >}}` | Präsenz-Master |
+| Türkis | 100/10/30/0 | `{{< brand color tuerkis >}}` | Verbund-Bachelor |
+| Grün | 40/0/100/0 | `{{< brand color gruen >}}` | Verbund-Master |
+
+### Kontakt
+
+Bei Fragen zum FH-SWF Quarto Theme wenden Sie sich bitte an:
+
+**Fachhochschule Südwestfalen**  
+University of Applied Sciences  
+[www.fh-swf.de](https://www.fh-swf.de)  
+E-Mail: [cd-support@fh-swf.de](mailto:cd-support@fh-swf.de)
+
+```{=html}
+<div style="text-align: center; margin: 3rem 0; padding: 2rem; background-color: rgba({{< brand color primary >}}, 0.1); border-radius: 9px; border-left: 4px solid {{< brand color primary >}};">
+  <h3 style="color: {{< brand color primary >}};">Claim</h3>
+  <p style="font-size: 1.2em; font-style: italic; color: {{< brand color primary >}};">»Wir geben Impulse«</p>
+</div>
+```

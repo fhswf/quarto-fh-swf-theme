@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Background rectangle (dark for white logo) -->
+  <rect x="0" y="0" width="200" height="80" fill="#333333" />
+  
+  <!-- Icon (white version) -->
+  <rect x="20" y="20" width="40" height="40" fill="#ffffff" stroke="#ffffff" stroke-width="2" />
+  <rect x="25" y="60" width="30" height="15" fill="#ffffff" stroke="#ffffff" stroke-width="1" />
+  
+  <!-- FH SWF text -->
+  <text x="70" y="40" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">
+    FH Südwestfalen
+  </text>
+  <text x="70" y="60" fill="#ffffff" font-family="Arial, sans-serif" font-size="14">
+    University of Applied Sciences
+  </text>
+  
+  <!-- Placeholder indicator -->
+  <text x="10" y="15" fill="#cccccc" font-family="Arial, sans-serif" font-size="8" opacity="0.5">
+    PLACEHOLDER - ADD OFFICIAL LOGO
+  </text>
+</svg>
