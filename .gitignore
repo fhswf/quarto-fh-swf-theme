@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Quarto
+.quarto/
+_site/
+_publish.yml
+
+# Temporary/Output Files
+*.log
+*.tmp
+*.temp
+*~
+# .swp for vim users
+*.swp
+
+# Reveal.js / JS
+node_modules/
+dist/
