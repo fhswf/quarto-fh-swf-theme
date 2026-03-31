@@ -1,0 +1,180 @@
+---
+title: "FH-SWF Theme PDF Dokument Beispiel"
+subtitle: "Quarto PDF Dokument mit FH-SWF Corporate Design"
+author: "Dr. Maria Schmidt"
+date: "März 2026"
+institution: "Fachhochschule Südwestfalen"
+format:
+  typst:
+    papersize: a4
+    margin:
+      x: 2.5cm
+      y: 2.5cm
+    logo:
+      image: assets/logos/fhswf-logo.svg
+      width: 25%
+      location: left-top
+      padding-left: 0.5cm
+      padding-top: 0.5cm
+---
+
+# Einführung
+
+Dieses Dokument zeigt die Implementierung des **FH-SWF Corporate Design** in Quarto PDF-Dokumenten. Das Design basiert auf den Richtlinien aus dem CD-Handbuch (August 2014) und verwendet den Typst-Engine für professionelle PDF-Ausgabe.
+
+## Corporate Design Elemente
+
+Das FH-SWF Corporate Design umfasst:
+
+1. **Farben**: Primärblau (#39569F) als Hausfarbe plus sieben Sekundärfarben
+2. **Typografie**: Lato (sans-serif) und Source Serif 4 (serif) als Open-Source-Alternativen zu Fedra
+3. **Logo**: Wort-Bildmarke mit stilisiertem Gesichts-Icon
+4. **Designelemente**: Rahmen mit abgerundeten Ecken (9mm Radius bei A4)
+
+---
+
+## Farbpalette {#farben}
+
+### Primärfarbe
+
+Die Primärfarbe Blau ist die Hausfarbe der FH-SWF: **#39569F** (CMYK: 100/70/0/0 | RAL: 5005 Signalblau)
+
+### Sekundärfarben
+
+Die Sekundärfarben haben spezifische Funktionen:
+
+| Farbe | Hex | Verwendung |
+|-------|-----|------------|
+| Rot | #CC0000 | Präsenz-Bachelor |
+| Orange | #FF8000 | Präsenz-Master |
+| Türkis | #009FB3 | Verbund-Bachelor |
+| Grün | #99CC00 | Verbund-Master |
+| Grau | #A1B3B3 | Allgemeine Verwendung |
+
+---
+
+## Typografie {#typografie}
+
+### Schriftarten
+
+| Rolle | Schriftart | Gewichte | Verwendung |
+|-------|------------|----------|------------|
+| Sans-serif | **Lato** | 300, 400, 500, 600, 700 | Überschriften, Fließtext, UI |
+| Serif | **Source Serif 4** | 400, 600, 700 | Akademische Texte, Zitate |
+| Monospace | **JetBrains Mono** | 400, 600 | Code, technische Inhalte |
+
+### Überschriften
+
+# Überschrift Level 1 (Lato 600)
+## Überschrift Level 2 (Lato 600)
+### Überschrift Level 3 (Lato 600)
+
+### Fließtext
+
+Dies ist ein Beispiel für Fließtext in **Lato Regular**. Der Text hat einen Zeilenhöhe von 1.5 für optimale Lesbarkeit. Die Schriftgröße beträgt 11pt für PDF-Dokumente.
+
+> Dies ist ein Zitat in **Source Serif 4** mit deutschen Anführungszeichen. Zitate werden mit einem blauen Akzent auf der linken Seite und abgerundeten Ecken dargestellt.
+
+---
+
+## Code-Beispiele {#code}
+
+### Python
+
+```python
+import numpy as np
+import pandas as pd
+
+def berechne_statistiken(daten):
+    """
+    Berechnet grundlegende Statistiken für einen Datensatz.
+    """
+    if len(daten) == 0:
+        return {}
+    
+    return {
+        'mittelwert': np.mean(daten),
+        'std': np.std(daten),
+        'min': np.min(daten),
+        'max': np.max(daten),
+        'anzahl': len(daten)
+    }
+
+# Beispielverwendung
+messwerte = [23.5, 24.1, 22.8, 25.3, 23.9]
+stats = berechne_statistiken(messwerte)
+print(f"Mittelwert: {stats['mittelwert']:.2f}")
+```
+
+### Inline-Code
+
+Die Funktion `berechne_statistiken()` gibt ein Dictionary mit statistischen Kennzahlen zurück.
+
+---
+
+## Tabellen {#tabellen}
+
+### Studiengänge der FH-SWF
+
+| Studiengang | Abschluss | Typ | Farbe |
+|-------------|-----------|-----|-------|
+| Informatik | B.Sc. | Präsenz-Bachelor | #CC0000 |
+| Maschinenbau | B.Eng. | Verbund-Bachelor | #009FB3 |
+| Wirtschaftsingenieurwesen | M.Sc. | Präsenz-Master | #FF8000 |
+| Data Science | M.Sc. | Präsenz-Master | #FF8000 |
+| International Management | M.A. | Verbund-Master | #99CC00 |
+
+---
+
+## Hinweisblöcke {#hinweise}
+
+::: {.callout-note}
+### Allgemeiner Hinweis
+
+Dies ist ein allgemeiner Hinweis mit blauer Umrandung.
+:::
+
+::: {.callout-warning}
+### Wichtiger Hinweis
+
+Wichtige Informationen werden mit orangefarbener Umrandung hervorgehoben.
+:::
+
+::: {.callout-important}
+### Kritischer Hinweis
+
+Kritische Informationen verwenden rote Umrandung.
+:::
+
+::: {.callout-tip}
+### Tipp
+
+Hilfreiche Tipps werden mit grüner Umrandung dargestellt.
+:::
+
+---
+
+## Fazit {#fazit}
+
+Das FH-SWF Quarto Theme ermöglicht die konsistente Anwendung des Corporate Designs in PDF-Dokumenten mit professioneller Druckqualität.
+
+### Vorteile
+
+1. **Einheitliches Erscheinungsbild** über alle Dokumenttypen hinweg
+2. **Einfache Pflege** durch zentrale `_brand.yml`-Konfiguration
+3. **Professionelle PDF-Qualität** durch Typst-Engine
+4. **Vollständige Quarto-Integration** für HTML, RevealJS und PDF-Formate
+
+---
+
+## Anhang {#anhang}
+
+### Kontakt
+
+Bei Fragen zum FH-SWF Quarto Theme wenden Sie sich bitte an:
+
+**Fachhochschule Südwestfalen**  
+University of Applied Sciences  
+[www.fh-swf.de](https://www.fh-swf.de)
+
+*Claim: »Wir geben Impulse«*

@@ -1,0 +1,164 @@
+---
+title: "INCiTiS-Food weekly meeting notes"
+subtitle: "Thursday 2025-03-19 via Zoom"
+author: "Rolf Morgenstern"
+date: "2026-03-19"
+institution: "Fachhochschule Südwestfalen"
+format:
+  html:
+    toc: false
+    toc-title: "Inhaltsverzeichnis"
+    toc-depth: 3
+---
+
+
+### Project Reference: audio1298294047.srt.txt
+
+---
+
+## 📋 Meeting Overview
+| Item | Details |
+|------|---------|
+| **Meeting Type** | Weekly Jour Fixe (Standing Meeting) via Zoom |
+| **Context** | First meeting after Review Meeting |
+| **Notable Timing Note** | Ramadan holidays affecting attendance |
+
+---
+
+## 📝 Key Discussion Points & Decisions
+
+### 1. Review Meeting Feedback (Project Status)
+| Topic | Key Points |
+|-------|------------|
+| **Overall Assessment** | Reviewers found meeting well-organized, report good quality, information clear. Positive atmosphere; partners congratulated the team multiple times |
+| **Strengths Noted by Reviewers** | - Report quality and clarity<br>- Meeting organization<br>- Information provided was comprehensive |
+| **Areas Raised for Concern** | - Project Officer expressed concern about uncompleted tasks<br>- Worried about feasibility of completing remaining work in limited time |
+| **Specific Concern** | Reviewer noted limited panel data (only two-time data); team clarified this is acceptable in final report |
+
+### 2. Open Call #2 Selection Timeline & Process
+| Topic | Key Points |
+|-------|------------|
+| **Winner Selection Deadline** | End of March |
+| **Legal Entity Registration** | Winners must register before April/May |
+| **Implementation Window** | 6 months (May–November) to complete work |
+| **Applicant Support Needed** | Review meeting - project officer asked how to manage ~300 non-winning applicants |
+| **Budget Note** | Project has 30% budget remaining for final year; no funds available for cost-neutral extension proposal |
+
+### 3. Missing KPIs – Responsibility Assignment
+| Living Lab | KPI Area(s) | Notes |
+|------------|------------|-------|
+| **Sierra Leone** | BSF augmented fish feed (economic data) | Primary lab for this KPI; already collecting data |
+| **Ui** | BSF augmented fish feed (economic data) | Partner lab; already collecting relevant data |
+| **UDS Ghana** | Yield KPI (peppers experiment) | Already conducting experiments; data available |
+| **BUST** | Yield KPI (vegetable experiments) | May have relevant data; needs confirmation |
+| **KU** | Yield KPI (general crop experiments) | May have relevant data; needs confirmation |
+
+### 4. Sustainability Strategy for Living Labs
+| Action Item | Owner/Lead |
+|-------------|-----------|
+| **Create Sustainability Matrix** | All Living Labs + Coordination team |
+| **Format** | Matrix approach: Living Labs (rows) × Sustainability Opportunities/Themes (columns); identify cross-pollination of ideas |
+| **Data Collection Approach** | Prioritize existing data; minimize additional burden on Living Labs for LCA (Life Cycle Assessment) |
+| **Sustainability Dimensions** | Economic, Societal, Environmental, Policy sustainability |
+
+### 5. Upcoming External Events
+| Event | Date/Time | Location | Key Participants |
+|-------|----------|---------|------------------|
+| **ANOL Launch Event** | October (confirmed) / September (possible) | TBD (Germany or Nigeria considered) | African partners, PO from Brussels invited |
+| **Virtual General Assembly** | June-July | Virtual (all partners) | All consortium members |
+| **Innovation Fair** | October | Brussels | PO invited; hybrid format |
+| **Brussels Opening** | Spring (canceled) | Brussels | Dr. Lapykis invited; list full |
+
+### 6. Final Year Planning (April–December)
+| Activity | Owner/Lead | Source Range |
+|----------|------------|--------------|
+| **Consortium Plan Development** | Coordination team + Ben (Monday, post-holiday) |
+| **Open Call Winners Planning Session** | Ben (Thursday) - with winners & Living Labs |
+| **Weekly Deliverable Reviews** | All WPs; Lead Beneficiary = UDS (but UDS supplies most resources) |
+| **Living Labs Workload Balance** | Ensure fair distribution when assigning KPIs to labs |
+
+---
+
+## 📋 Action Items (With Owners & Deadlines)
+
+| # | Action Item | Owner/Lead | Deadline |
+|---|-------------|------------|----------|
+| 1 | **Add Romualdas to WhatsApp group** | Meeting Chair | Immediate |
+| 2 | **Distribute WhatsApp group link** | Meeting Chair | Immediate |
+| 3 | **Determine which Living Labs contribute to which KPIs** | Carlos / Coordination team | Next week (Monday) |
+| 4 | **Schedule Thursday planning session with open call winners** | Ben / Meeting Chair | Next week (Thursday) |
+| 5 | **Contact non-responsive Living Labs (Njara, Franceville)** | Meeting Chair | Within 2 weeks of Easter |
+| 6 | **Contact African partners about grant maximization** | Vanessa | As soon as possible (for final year) |
+| 7 | **Confirm ANOL event location (Nigeria vs. Germany)** | Team decision pending | Before October |
+| 8 | **Request slides from FNSSA/CEA project** | Meeting Chair / Dr. Lapykis contact | ASAP |
+| 9 | **Prepare consortium plan for Week 2 presentation** | Coordination team + Ben | Monday after holiday (post-Easter) |
+| 10 | **Final year budget optimization plan** | Vanessa / All partners | Ongoing for final year |
+| 11 | **Coordinate with Ben for Uganda trip (visa status)** | Meeting Chair / Vanessa | Check before Tuesday travel |
+| 12 | **Prepare for Virtual General Assembly attendance** | All partners | June-July (to be confirmed) |
+
+---
+
+## 📊 Key Statistics & Data Points
+| Metric | Value/Note |
+|--------|-----------|
+| **Remaining Project Duration** | 9.5 months (after current point) |
+| **Remaining Budget** | ~30% available (final year) |
+| **Budget Usage Pattern** | Partners saved on personal costs; travel budget mostly spent |
+| **Open Call #2 Deadline** | End of March | 108-116 |
+| **Implementation Window (Winners)** | May–November (6 months) |
+| **Final Report Deadline** | January–February of next year |
+| **Final Meeting** | June–July (Virtual General Assembly) |
+
+---
+
+## 📝 Participant Notes & Observations
+| Topic | Key Points |
+|-------|------------|
+| **Project Management Praise** | Wolf (Wolfgang) highlighted Ben and Vanessa as exceptional project managers; called the team spirit a "self-runner" |
+| **Attendance Issues Explained** | Ramadan holidays; Sugar Festival tomorrow (Germany); some couldn't join due to national/public holidays |
+| **Team Dynamics** | High team morale; appreciation for Vanessa's leadership and Ben's support of Living Labs |
+| **Travel Plans** | Ben traveling to Uganda on Tuesday (if visa approved); potential meeting Monday afternoon after lectures |
+
+---
+
+## 🔍 Uncertainties / Pending Clarifications
+1. **ANOL launch location** - Still deciding between Nigeria or Germany; not finalized yet (574-586)
+2. **Dr. Lapykis substitution** - Dr. Lapykis booked; need to find substitute for Brussels event (380-402)
+3. **Open call deadline** - Exact date for open call selection not confirmed (108-116)
+4. **Virtual General Assembly scheduling** - Need to confirm exact dates in June-July (834-835)
+5. **Opening ceremony funding** - Unclear if budget available for opening event (not explicitly confirmed)
+
+---
+
+## 📅 Upcoming Meeting Schedule
+| Meeting | Date/Time | Location | Attendees Expected |
+|---------|----------|----------|-------------------|
+| **Consortium Planning** | Monday, post-holiday (after Easter) | Zoom | Coordination team + Ben |
+| **Winners Planning Session** | Thursday (date TBD) | Zoom | Open call winners + Living Labs |
+| **ANOL Launch Event** | October (confirmed); September possible | Nigeria or Germany | Partners + PO from Brussels |
+| **Virtual General Assembly** | June–July (TBD) | Virtual | All consortium members |
+
+---
+
+## ⚠️ Risk Factors & Mitigation Notes
+| Risk | Impact | Mitigation Strategy |
+|------|--------|-------------------|
+| **30% budget remaining for final year** | High - must maximize impact | Vanessa to contact partners about grant maximization strategies; spend available budget wisely |
+| **No extension funding available** | High - project ends as scheduled | Focus on completing current KPIs; plan for post-project sustainability through external partnerships |
+| **Timing pressure on Open Call #2** | Medium-High - only 6 months to complete work | Coordinate with Living Labs early; assign tasks immediately upon winner notification |
+| **Pandemic-related travel restrictions** | Low-Medium - already factored into planning | Hybrid meeting format; virtual options reserved for key events |
+
+---
+
+## 📊 Summary Statistics
+| Metric | Value |
+|--------|-------|
+| **Total meeting duration** | ~102 minutes (1:42) |
+| **Key focus areas** | Open Call #2, KPI completion, Sustainability strategy, Final year planning |
+| **Language** | English with some French elements; participants from multiple countries (Nigeria, Germany, Kenya, Côte d'Ivoire, Sierra Leone, Italy) |
+
+---
+
+**Meeting Concluded:** 01:02:51 (Vanessa to turn off recording)
+
+*Notes prepared from: audio1298294047.srt.txt - Project INCiTiS-Food Weekly Jour Fixe via Zoom*

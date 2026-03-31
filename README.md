@@ -8,6 +8,7 @@ This theme provides consistent branding for FH-SWF using Quarto's `_brand.yml` s
 
 - **RevealJS presentations** with custom title slides and branded styling
 - **HTML documents** with FH-SWF colors, typography, and design elements
+- **PDF documents** via Typst engine for professional print output
 - **Cross-format consistency** through a single `_brand.yml` configuration
 
 ## Installation
@@ -46,6 +47,13 @@ format:
   revealjs:
     theme: [brand, fhswf-revealjs.scss]
     slide-number: true
+  
+  typst:
+    theme: [brand, fhswf-pdf.scss]
+    papersize: a4
+    margin:
+      x: 2.5cm
+      y: 2.5cm
 ```
 
 ### Individual Documents
@@ -68,6 +76,16 @@ title: "My Document"
 format:
   html:
     theme: [brand, fhswf-html.scss]
+---
+```
+
+```yaml
+---
+title: "My PDF Document"
+format:
+  typst:
+    theme: [brand, fhswf-pdf.scss]
+    papersize: a4
 ---
 ```
 
@@ -105,6 +123,7 @@ See the `examples/` directory:
 
 - `slides.qmd` - RevealJS presentation example
 - `document.qmd` - HTML document example
+- `document-pdf.qmd` - PDF document example (Typst)
 
 ## File Structure
 
@@ -115,13 +134,17 @@ Quarto-FH-SWF-Theme/
 ├── styles/                  # SCSS theme files
 │   ├── _variables.scss      # Shared variables
 │   ├── fhswf-revealjs.scss  # RevealJS theme
-│   └── fhswf-html.scss      # HTML theme
+│   ├── fhswf-html.scss      # HTML theme
+│   └── fhswf-pdf.scss       # PDF/Typst theme
 ├── templates/               # Template partials
 │   └── title-slide.html     # Custom RevealJS title slide
 ├── assets/logos/            # Logo files (placeholders included)
+├── .github/workflows/        # CI/CD workflows
+│   └── pdf-ci.yml          # Automated PDF generation
 ├── examples/                # Example documents
 │   ├── slides.qmd          # Presentation example
-│   └── document.qmd        # Document example
+│   ├── document.qmd        # HTML document example
+│   └── document-pdf.qmd    # PDF document example
 └── README.md               # This file
 ```
 
@@ -180,9 +203,72 @@ quarto render examples/slides.qmd
 # Build document example  
 quarto render examples/document.qmd
 
+# Build PDF document
+quarto render examples/document-pdf.qmd --to typst
+
 # Preview with live reload
 quarto preview examples/slides.qmd
 ```
+
+## PDF Generation
+
+### Local PDF Generation
+
+To generate PDF documents locally:
+
+```bash
+# Install Quarto 1.6+
+quarto --version
+
+# Render a document to PDF
+quarto render examples/document-pdf.qmd --to typst
+```
+
+### CI/CD PDF Generation
+
+The project includes a GitHub Actions workflow (`.github/workflows/pdf-ci.yml`) that automatically generates PDFs on push to main branch.
+
+**Features:**
+- Separate jobs for documents and slides
+- Parallel execution for faster builds
+- Artifact storage for 30 days
+- Automatic PDF collection
+
+**Trigger Conditions:**
+- Push to `main` branch
+- Pull requests to `main` branch
+
+### PDF Settings
+
+PDF documents use the following settings (configured in `_quarto.yml` and `_brand.yml`):
+
+| Setting | Value |
+|---------|-------|
+| Paper size | A4 (DIN) |
+| Margins | 2.5cm x 2.5cm |
+| Logo width | 25% (per CD guidelines) |
+| Body font | Lato 11pt |
+| Heading font | Lato Semibold |
+| Code font | JetBrains Mono 10pt |
+
+### Troubleshooting
+
+**PDF generation fails with "Font not found"**
+- Ensure Google Fonts are accessible (internet connection required)
+- For offline builds, consider self-hosting fonts
+
+**Logo not appearing in PDF**
+- Verify logo path in `_quarto.yml` matches actual file location
+- Check that `assets/logos/fhswf-logo.svg` exists
+
+**PDF colors don't match HTML output**
+- Typst uses CMYK approximations for some colors
+- Verify colors against printed output if color accuracy is critical
+
+**CI workflow failing**
+- Check Quarto version compatibility (requires 1.6+)
+- Verify GitHub Actions has write permissions for artifacts
+- Check workflow logs for specific error messages
 
 ## License
 

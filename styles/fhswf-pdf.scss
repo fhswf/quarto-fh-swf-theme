@@ -1,0 +1,176 @@
+/*-- scss:defaults --*/
+
+@import "./variables";
+
+// Typography for PDF (Lato for body, Source Serif 4 for academic text)
+$pdf-font-family: "Lato", sans-serif;
+$pdf-heading-font-family: "Lato", sans-serif;
+$pdf-code-font-family: "JetBrains Mono", monospace;
+
+// PDF-specific font sizes (following academic standards)
+$pdf-body-font-size: 11pt;
+$pdf-heading-font-size-scale: 1.25;
+
+// Color palette from brand.yml
+$pdf-primary: #39569F;
+$pdf-secondary: #A1B3B3;
+$pdf-text: #333333;
+
+/*-- scss:rules --*/
+
+// PDF document body
+body {
+  font-family: $pdf-font-family;
+  font-size: $pdf-body-font-size;
+  color: $pdf-text;
+  line-height: 1.5;
+}
+
+// Headings with primary blue
+h1, h2, h3, h4, h5, h6 {
+  font-family: $pdf-heading-font-family;
+  font-weight: 600;
+  color: $pdf-primary;
+  line-height: 1.3;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
+h4 { font-size: 1.1em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.9em; }
+
+// Links
+a {
+  color: $pdf-primary;
+  text-decoration: underline;
+}
+
+// Code blocks
+pre, code {
+  font-family: $pdf-code-font-family;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: #f5f5f5;
+  padding: 1em;
+  border-radius: 4px;
+  border: 1px solid $pdf-secondary;
+}
+
+code:not(pre code) {
+  background-color: #f5f5f5;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+// Tables
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+  
+  th {
+    background-color: $pdf-primary;
+    color: white;
+    font-weight: 600;
+    padding: 0.5em;
+    text-align: left;
+  }
+  
+  td {
+    padding: 0.5em;
+    border: 1px solid $pdf-secondary;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgba($pdf-secondary, 0.1);
+  }
+}
+
+// Blockquotes with German guillemets
+blockquote {
+  border-left: 4px solid $pdf-primary;
+  padding-left: 1em;
+  margin-left: 0;
+  font-style: italic;
+  font-family: "Source Serif 4", serif;
+  background-color: rgba($pdf-primary, 0.05);
+  
+  &::before {
+    content: "»";
+    color: $pdf-primary;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 0.25em;
+  }
+  
+  &::after {
+    content: "«";
+    color: $pdf-primary;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 0.25em;
+  }
+}
+
+// Lists
+ul, ol {
+  li {
+    margin-bottom: 0.5em;
+  }
+}
+
+// Callout blocks
+.callout {
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  padding: 0.75em;
+  margin: 1em 0;
+  
+  &.callout-note {
+    border-color: $pdf-primary;
+    background-color: rgba($pdf-primary, 0.05);
+  }
+  
+  &.callout-warning {
+    border-color: #FF8000;
+    background-color: rgba(#FF8000, 0.05);
+  }
+  
+  &.callout-important {
+    border-color: #CC0000;
+    background-color: rgba(#CC0000, 0.05);
+  }
+  
+  &.callout-tip {
+    border-color: #99CC00;
+    background-color: rgba(#99CC00, 0.05);
+  }
+}
+
+// FH-SWF colored callouts
+.callout-bachelor-presence {
+  border-color: #CC0000;
+  background-color: rgba(#CC0000, 0.05);
+}
+
+.callout-master-presence {
+  border-color: #FF8000;
+  background-color: rgba(#FF8000, 0.05);
+}
+
+.callout-bachelor-dual {
+  border-color: #009FB3;
+  background-color: rgba(#009FB3, 0.05);
+}
+
+.callout-master-dual {
+  border-color: #99CC00;
+  background-color: rgba(#99CC00, 0.05);
+}

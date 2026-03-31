@@ -21,6 +21,19 @@ format:
     template-partials:
       - templates/title-slide.html
 
+  typst:
+    theme: [brand, styles/fhswf-pdf.scss]
+    papersize: a4
+    margin:
+      x: 2.5cm
+      y: 2.5cm
+    logo:
+      image: assets/logos/fhswf-logo.svg
+      width: 25%
+      location: left-top
+      padding-left: 0.5cm
+      padding-top: 0.5cm
+
 # Common metadata
 metadata:
   author: "FH Südwestfalen"
