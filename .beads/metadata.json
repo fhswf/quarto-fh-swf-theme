@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "server",
+  "dolt_database": "fhswf_theme",
+  "project_id": "a18c71e5-b8c9-4231-b66f-7e54d237e9db"
+}
