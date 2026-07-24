@@ -23,7 +23,7 @@ This theme provides consistent branding for FH-SWF using Quarto's `_brand.yml` s
 
 ```bash
 # Coming soon: Install as a Quarto extension
-quarto add fh-swf/quarto-fhswf-theme
+quarto add fh-swf/quarto-fh-swf-theme
 ```
 
 ## Usage

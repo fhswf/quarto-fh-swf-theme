@@ -18,8 +18,11 @@ _publish.yml
 node_modules/
 dist/
 
-/.quarto/
+.quarto/
 **/*.quarto_ipynb
+
+# Quarto generated output directories (e.g., example_files/)
+*_files/
 
 # Beads / Dolt files (added by bd init)
 .dolt/
