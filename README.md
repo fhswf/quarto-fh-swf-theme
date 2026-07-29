@@ -108,7 +108,7 @@ format:
 
 - Multiple sizes (`small`, `medium`, `large`)
 - Light/dark variants for different backgrounds
-- Placeholder included - add official FH-SWF logos to `assets/logos/`
+- Official PNG logo provided (`logo-fh-swf.png`) - placed in `assets/logos/`
 
 ### Design Elements
 
