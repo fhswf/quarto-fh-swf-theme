@@ -27,12 +27,7 @@ format:
     margin:
       x: 2.5cm
       y: 2.5cm
-    logo:
-      image: assets/logos/fhswf-logo.svg
-      width: 25%
-      location: left-top
-      padding-left: 0.5cm
-      padding-top: 0.5cm
+    logo: false  # Logo disabled for PDF - see feature branch for fix
 
 # Common metadata
 metadata:
