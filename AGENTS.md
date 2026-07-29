@@ -88,7 +88,9 @@ Quarto-FH-SWF-Theme/
 ├── _quarto.yml                      # Project configuration
 ├── assets/
 │   ├── logos/
-│   │   ├── fhswf-logo.svg          # Full logo (color)
+│   │   ├── logo-fh-swf.png        # Official PNG logo (183x57 px, provided by user)
+│   │   ├── logo-fh-swf-rgb.png    # RGB conversion for PDF compatibility
+│   │   ├── fhswf-logo.svg          # Full logo (SVG placeholder)
 │   │   ├── fhswf-logo-white.svg    # Negative variant
 │   │   ├── fhswf-logo-bw.svg       # B/W variant
 │   │   ├── fhswf-icon.svg          # Bildmarke (color)
@@ -144,7 +146,7 @@ Quarto-FH-SWF-Theme/
 | Sans-serif | Lato | User preference; replaces Arial fallback |
 | Serif | Source Serif 4 | Best open-source serif, variable, old-style figures |
 | Formats | RevealJS + HTML | Most common Quarto use cases |
-| Logo | Bundled | Convenience; publicly used on university website |
+| Logo | PNG (official) | User provided `logo-fh-swf.png` (183x57 px); SVG placeholders for backwards compatibility |
 
 ## Open Questions
 
@@ -152,7 +154,7 @@ Quarto-FH-SWF-Theme/
 - [ ] Multiple RevealJS slide layouts (section dividers with full-color backgrounds)?
 - [ ] Future Typst/PDF format?
 - [ ] Pre-compute tint/shade scales as SCSS variables or generate programmatically?
-- [ ] Official SVG logo available, or recreate from PDF?
+- [x] Official PNG logo provided by user (logo-fh-swf.png)
 
 ## Dependencies
 
