@@ -11,8 +11,8 @@ format:
       x: 2.5cm
       y: 2.5cm
     logo:
-      image: assets/logos/fhswf-logo.svg
-      width: 20%  # Reduced from 25% to prevent overlap with title
+      image: assets/logos/logo-fh-swf.png
+      width: 5cm
       location: left-top
       padding-left: 0.5cm
       padding-top: 0.5cm

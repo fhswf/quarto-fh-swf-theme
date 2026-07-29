@@ -89,6 +89,20 @@ typography:
   monospace-block:
     background-color: "#f5f5f5"
 
+logo:
+  images:
+    wort-bildmarke-color: assets/logos/logo-fh-swf.png
+    wort-bildmarke-white: assets/logos/logo-fh-swf.png
+    wort-bildmarke-bw: assets/logos/logo-fh-swf.png
+    bildmarke-color: assets/logos/logo-fh-swf.png
+    bildmarke-white: assets/logos/logo-fh-swf.png
+
+  small: bildmarke-color
+  medium:
+    light: wort-bildmarke-color
+    dark: wort-bildmarke-white
+  large: wort-bildmarke-color
+
 meta:
   name: "Fachhochschule Südwestfalen"
   subtitle: "University of Applied Sciences"
