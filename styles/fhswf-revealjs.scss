@@ -137,12 +137,12 @@ $presentation-h4-font-size: 1.2em;
     
     &.has-orange-background {
       background-color: $brand-orange !important;
-      color: white;
+      color: #333333;  // Dark gray for WCAG AA contrast on orange
     }
     
     &.has-teal-background {
       background-color: $brand-tuerkis !important;
-      color: white;
+      color: #333333;  // Dark gray for WCAG AA contrast on turquoise
     }
     
     &.has-green-background {
