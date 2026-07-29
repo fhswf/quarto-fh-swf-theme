@@ -110,6 +110,27 @@ format:
 - Light/dark variants for different backgrounds
 - Official PNG logo provided (`logo-fh-swf.png`) - placed in `assets/logos/`
 
+#### Logo Activation/Deactivation for PDF
+
+**To enable the logo in PDF documents**, add to the document frontmatter:
+
+```yaml
+format:
+  typst:
+    logo:
+      image: assets/logos/logo-fh-swf.png
+      width: 5cm
+      location: left-top
+      padding-left: 0.5cm
+      padding-top: 0.5cm
+```
+
+**To disable the logo in PDF documents**, remove the `logo` section from both:
+1. The document frontmatter, AND
+2. The `logo:` section in `_brand.yml` (commenting out is not sufficient due to Quarto's brand precedence)
+
+> **Important:** Setting `logo: false` in the document frontmatter alone does NOT disable the logo if `_brand.yml` contains logo configuration. The `_brand.yml` logo section must also be removed or emptied.
+
 ### Design Elements
 
 - **Rounded corners**: 9px radius (9mm at A4, ratio 1:3)
@@ -258,8 +279,14 @@ PDF documents use the following settings (configured in `_quarto.yml` and `_bran
 - For offline builds, consider self-hosting fonts
 
 **Logo not appearing in PDF**
-- Verify logo path in `_quarto.yml` matches actual file location
-- Check that `assets/logos/fhswf-logo.svg` exists
+- Verify logo path in document frontmatter matches actual file location
+- Check that `assets/logos/logo-fh-swf.png` exists
+- If using `_brand.yml` logo, ensure the logo section is properly configured
+- To disable logo, remove logo section from BOTH frontmatter AND `_brand.yml`
+
+**Logo still appears even with `logo: false`**
+- This is expected behavior - Quarto's brand system applies `_brand.yml` logo settings before document-level `logo: false`
+- Must remove the `logo:` section from `_brand.yml` to fully disable
 
 **PDF colors don't match HTML output**
 - Typst uses CMYK approximations for some colors
