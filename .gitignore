@@ -33,3 +33,6 @@ dist/
 .omo/
 
 /.quarto/
+
+# Beads / Dolt files (added by bd init)
+.beads/proxieddb/

@@ -1,7 +1,7 @@
 {
   "database": "dolt",
   "backend": "dolt",
-  "dolt_mode": "server",
-  "dolt_database": "fhswf_theme",
-  "project_id": "a18c71e5-b8c9-4231-b66f-7e54d237e9db"
+  "dolt_mode": "embedded",
+  "dolt_database": "Quarto_FH_SWF_Theme",
+  "project_id": "9e6a3518-40b2-4944-9a4f-5cc41afd25b8"
 }
